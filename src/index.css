@@ -10,11 +10,11 @@
   --color-muted-copper: #B26E46;       /* Optional Accent: Metallic warmth */
   --color-offwhite-linen: #F4F1EA;     /* Background Neutral: Gentle off-white */
 
-  --font-heading: 'Merriweather Sans', sans-serif;      /* Elegant, classic serif for headings */
-  --font-accent: 'Cormorant Garamond', serif;      /* Sophisticated serif for subheadings */
+  --font-heading: 'Raleway', sans-serif;     /* Elegant, classic serif for headings */
+  --font-accent: 'Raleway', sans-serif;     /* Sophisticated serif for subheadings */
   /* --font-body: 'Work Sans', sans-serif;                 Readable sans-serif for body text */
-  --font-body: 'Merriweather Sans', sans-serif;
-  --font-sans: 'Merriweather Sans', sans-serif;      /* Clean sans-serif for body text */
+  --font-body: 'Raleway', sans-serif;
+  --font-sans: 'Raleway', sans-serif;     /* Clean sans-serif for body text */
   --font-ui: 'Raleway', sans-serif;               /* Modern sans-serif for UI elements */
 }
 
@@ -88,9 +88,9 @@ button:focus-visible {
 } */
 
 body {
-  background: var(--color-charcoal-gray);
-  /* color: var(--color-charcoal-gray);
+  background: var(--color-deep-forest);
+  color: var(--color-oatmeal-beige);
   font-family: var(--font-body);
-  min-height: 100vh;
+  /* min-height: 100vh;
   margin: 0; */
 }

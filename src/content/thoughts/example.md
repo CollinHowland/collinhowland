@@ -6,4 +6,4 @@ summary: "A short summary of my first post."
 
 # My First Post
 
-This is the content of my first blog post!
+This is the content of my first thoughts post!

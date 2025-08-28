@@ -1,20 +1,19 @@
 // import profilePic from "../assets/profile.jpg";
 
+import Title from "../components/Title";
+import ContentContainer from "../components/ContentContainer";
+
 export default function About() {
     return (
-        <div
-            className="max-w-4xl mx-auto px-4 py-12 bg-charcoal-gray text-oatmeal-beige font-body"
-        >
+        <ContentContainer>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                 {/* <img src={profilePic} alt="Profile" className="w-48 h-48 rounded-full shadow-lg" /> */}
                 <div
-                    className="space-y-4 text-oatmeal-beige font-body"
+                    className="space-y-4 font-body"
                 >
-                    <h1
-                        className="text-3xl font-bold text-oatmeal-beige font-heading"
-                    >
+                    <Title>
                         Hi, I'm Collin
-                    </h1>
+                    </Title>
                     <p>
                         I'm a passionate developer and creative thinker who loves learning and building things that make people smile.
                         If I'm not learning, I'm not happy.
@@ -29,7 +28,7 @@ export default function About() {
                         Happy to share some tasting notes, bottle recs, work experience, and cinnamon rolls - the only food I am 100% confident I can make better than anywhere else.
                     </p>
                     <p>
-                        I was feeling a bit of fomo from not putting a personal website/blog out into the world so here it is. Don't be a stranger and reach out!
+                        I was feeling a bit of fomo from not putting a personal website/thoughts out into the world so here it is. Don't be a stranger and reach out!
                     </p>
                 </div>
             </div>
@@ -43,7 +42,7 @@ export default function About() {
                 >
                     {/* LinkedIn SVG */}
                     <svg
-                        className="w-7 h-7 hover:scale-110 transition text-oatmeal-beige hover:text-bourbon-barrel"
+                        className="w-7 h-7 hover:scale-110 transition hover:text-bourbon-barrel"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                     >
@@ -58,7 +57,7 @@ export default function About() {
                 >
                     {/* GitHub SVG */}
                     <svg
-                        className="w-7 h-7 hover:scale-110 transition text-oatmeal-beige hover:text-bourbon-barrel"
+                        className="w-7 h-7 hover:scale-110 transition hover:text-bourbon-barrel"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                     >
@@ -71,7 +70,7 @@ export default function About() {
                 >
                     {/* Email SVG */}
                     <svg
-                        className="w-7 h-7 hover:scale-110 transition text-oatmeal-beige hover:text-bourbon-barrel"
+                        className="w-7 h-7 hover:scale-110 transition hover:text-bourbon-barrel"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                     >
@@ -79,6 +78,6 @@ export default function About() {
                     </svg>
                 </a>
             </div>
-        </div>
+        </ContentContainer>
     );
 }

@@ -1,3 +1,10 @@
+import Title from "../components/Title";
+import ContentContainer from "../components/ContentContainer";
+
 export default function Fun() {
-  return <div className="p-8">Fun (Coming Soon)</div>;
+  return (
+    <ContentContainer>
+        <Title>Fun (Coming Soon)</Title>
+    </ContentContainer>
+  );
 }

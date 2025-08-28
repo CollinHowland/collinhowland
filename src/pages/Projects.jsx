@@ -1,3 +1,10 @@
+import Title from "../components/Title";
+import ContentContainer from "../components/ContentContainer";
+
 export default function Projects() {
-  return <div className="p-8">Projects (Coming Soon)</div>;
+    return (
+        <ContentContainer>
+            <Title>Projects (Coming Soon)</Title>
+        </ContentContainer>
+    );
 }

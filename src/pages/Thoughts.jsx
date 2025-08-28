@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import BlogList from "../components/BlogList";
+import ThoughtsList from "../components/ThoughtsList";
+import Title from "../components/Title";
 import matter from "front-matter"
+import ContentContainer from "../components/ContentContainer";
 
-export default function Blog() {
+export default function Thoughts() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    // Dynamically import all markdown files in content/blog
-    const files = import.meta.glob("../content/blog/*.md", { query: "?raw", import: "default" });
+    // Dynamically import all markdown files in content/thoughts
+    const files = import.meta.glob("../content/thoughts/*.md", { query: "?raw", import: "default" });
 
     Promise.all(
       Object.entries(files).map(async ([path, resolver]) => {
@@ -29,9 +31,10 @@ export default function Blog() {
   }, []);
 
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold mb-6">Blog</h1>
-      <BlogList posts={posts} />
-    </div>
+    <ContentContainer>
+      {/* <h1 className="text-2xl font-bold mb-6">Thoughts</h1> */}
+      <Title>Thoughts</Title>
+      <ThoughtsList posts={posts} />
+    </ContentContainer>
   );
 }

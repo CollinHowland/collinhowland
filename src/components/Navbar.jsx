@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const navLinks = [
   { to: "/", label: "About" },
   { to: "/projects", label: "Projects" },
-  { to: "/blog", label: "Blog" },
+  { to: "/thoughts", label: "Thoughts" },
   { to: "/fun", label: "Fun" },
 ];
 
@@ -50,18 +50,26 @@ export default function Navbar() {
   }, [location.pathname]);
 
   return (
-    <nav className="bg-charcoal-gray w-full">
-      <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3">
-        {/* Logo/Name on the left */}
-        <div className="font-ui text-xl tracking-tight text-bourbon-barrel flex items-center gap-2 mr-8">
-          <span className="text-bourbon-barrel text-2xl">🥃</span>
-          Collin Howland
-        </div>
+    <nav className="bg-deep-forest w-full">
+      <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3 relative">
+        {/* Logo on the left */}
+        {/* <Link
+          to="/"
+          className="flex items-center gap-2"
+          style={{ textDecoration: "none" }}
+        >
+          <img
+            src="/logo.svg"
+            alt="Logo"
+            className="h-8 w-8"
+            style={{ minWidth: 32, minHeight: 32 }}
+          />
+        </Link> */}
         {/* Desktop menu */}
-        <div className="relative hidden md:block flex-1">
-          {/* Centered nav links */}
+        {/* Centered nav links with invisible spacer */}
+        <div className="relative flex-1 flex justify-center">
           <ul
-            className="flex gap-12 justify-center flex-1 relative"
+            className="flex gap-12 relative"
             ref={containerRef}
           >
             {navLinks.map((link, idx) => (
@@ -71,8 +79,8 @@ export default function Navbar() {
                   ref={el => (linkRefs.current[idx] = el)}
                   className={`px-1 pb-0.5 font-ui transition-colors
             ${location.pathname === link.to
-                      ? "text-bourbon-barrel"
-                      : "text-oatmeal hover:text-bourbon-barrel"
+                      ? "text-yellow-700"
+                      : "hover:text-yellow-700"
                     }
           `}
                 >
