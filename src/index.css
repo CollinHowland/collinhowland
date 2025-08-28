@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@theme {
+  --color-charcoal-gray: #333333;      /* Primary Neutral: Deep, modern base */
+  --color-slate-ash: #4A4A4A;          /* Accent Neutral: Softer gray */
+  --color-bourbon-barrel: #7B4B2A;     /* Primary Accent: Warm, rich brown */
+  --color-amber-whiskey: #D98E54;      /* Secondary Accent: Golden-orange highlight */
+  --color-oatmeal-beige: #D7C5A3;      /* Supporting Neutral: Light, warm neutral */
+  --color-deep-forest: #2E4B3B;        /* Optional Accent: Heritage green */
+  --color-muted-copper: #B26E46;       /* Optional Accent: Metallic warmth */
+  --color-offwhite-linen: #F4F1EA;     /* Background Neutral: Gentle off-white */
+
+  --font-heading: 'Merriweather Sans', sans-serif;      /* Elegant, classic serif for headings */
+  --font-accent: 'Cormorant Garamond', serif;      /* Sophisticated serif for subheadings */
+  /* --font-body: 'Work Sans', sans-serif;                 Readable sans-serif for body text */
+  --font-body: 'Merriweather Sans', sans-serif;
+  --font-sans: 'Merriweather Sans', sans-serif;      /* Clean sans-serif for body text */
+  --font-ui: 'Raleway', sans-serif;               /* Modern sans-serif for UI elements */
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -68,3 +86,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+body {
+  background: var(--color-charcoal-gray);
+  /* color: var(--color-charcoal-gray);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  margin: 0; */
+}
