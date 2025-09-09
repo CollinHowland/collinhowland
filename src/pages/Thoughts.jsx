@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import ThoughtsList from "../components/ThoughtsList";
 import Title from "../components/Title";
 import matter from "front-matter"
 import ContentContainer from "../components/ContentContainer";
+import PostList from "../components/PostList";
 
 export default function Thoughts() {
   const [posts, setPosts] = useState([]);
@@ -20,7 +20,8 @@ export default function Thoughts() {
           .split("/")
           .pop()
           .replace(/\.md$/, "");
-        return { ...attributes, slug };
+        const link = `/thoughts/${slug}`;
+        return { ...attributes, link, slug };
       })
     ).then((allPosts) => {
       // Sort by date descending
@@ -34,7 +35,7 @@ export default function Thoughts() {
     <ContentContainer>
       {/* <h1 className="text-2xl font-bold mb-6">Thoughts</h1> */}
       <Title>Thoughts</Title>
-      <ThoughtsList posts={posts} />
+      <PostList posts={posts} />
     </ContentContainer>
   );
 }

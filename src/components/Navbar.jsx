@@ -8,6 +8,8 @@ const navLinks = [
   { to: "/fun", label: "Fun" },
 ];
 
+
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -15,10 +17,12 @@ export default function Navbar() {
   const linkRefs = useRef([]);
   const [underline, setUnderline] = useState({ left: 0, width: 0 });
 
-  // Update underline position on route change or resize
-  useEffect(() => {
+  const handleResize = () => {
     const idx = navLinks.findIndex(link => link.to === location.pathname);
-    if (idx !== -1 && linkRefs.current[idx]) {
+    if (idx === -1) {
+      setUnderline({ left: 0, width: 0 });
+    }
+    else if (idx !== -1 && linkRefs.current[idx]) {
       const linkEl = linkRefs.current[idx];
       const containerEl = containerRef.current;
       const linkRect = linkEl.getBoundingClientRect();
@@ -28,23 +32,15 @@ export default function Navbar() {
         width: linkRect.width,
       });
     }
+  };
+
+  // Update underline position on route change or resize
+  useEffect(() => {
+    handleResize();
   }, [location.pathname]);
 
   // Update on window resize
   useEffect(() => {
-    const handleResize = () => {
-      const idx = navLinks.findIndex(link => link.to === location.pathname);
-      if (idx !== -1 && linkRefs.current[idx]) {
-        const linkEl = linkRefs.current[idx];
-        const containerEl = containerRef.current;
-        const linkRect = linkEl.getBoundingClientRect();
-        const containerRect = containerEl.getBoundingClientRect();
-        setUnderline({
-          left: linkRect.left - containerRect.left,
-          width: linkRect.width,
-        });
-      }
-    };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [location.pathname]);
@@ -52,7 +48,7 @@ export default function Navbar() {
   return (
     <nav className="bg-deep-forest w-full">
       <div className="max-w-5xl mx-auto flex items-center justify-between px-4 py-3 relative">
-        {/* Logo on the left */}
+        {/* Logo on the left - TODO need to fix spacing */}
         {/* <Link
           to="/"
           className="flex items-center gap-2"
