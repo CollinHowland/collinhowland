@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal-gray: #333333;      /* Primary Neutral: Deep, modern base */
+  --color-slate-ash: #4A4A4A;          /* Accent Neutral: Softer gray */
+  --color-bourbon-barrel: #7B4B2A;     /* Primary Accent: Warm, rich brown */
+  --color-amber-whiskey: #D98E54;      /* Secondary Accent: Golden-orange highlight */
+  --color-oatmeal-beige: #D7C5A3;      /* Supporting Neutral: Light, warm neutral */
+  --color-deep-forest: #2E4B3B;        /* Optional Accent: Heritage green */
+  --color-muted-copper: #B26E46;       /* Optional Accent: Metallic warmth */
+  --color-offwhite-linen: #F4F1EA;     /* Background Neutral: Gentle off-white */
+
+  --font-heading: 'Raleway', sans-serif;
+  --font-accent: 'Raleway', sans-serif;
+  --font-body: 'Sono', sans-serif;
+  --font-sans: 'Sono', sans-serif;
+  --font-ui: 'Raleway', sans-serif;
+}
+
+
+body {
+  background: var(--color-deep-forest);
+  color: var(--color-oatmeal-beige);
+  font-family: var(--font-body);
+}
+
+.circle {
+  shape-outside: circle();
+}

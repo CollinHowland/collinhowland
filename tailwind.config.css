@@ -1,0 +1,16 @@
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        charcoal: "#333333",
+        slateash: "#4A4A4A",
+        bourbon: "#7B4B2A",
+        amberwhiskey: "#D98E54",
+        oatmeal: "#D7C5A3",
+        deepforest: "#2E4B3B",
+        mutedcopper: "#B26E46",
+        offwhitelinen: "#F4F1EA",
+      },
+    },
+  },
+};
