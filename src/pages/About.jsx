@@ -2,6 +2,8 @@
 
 import Title from "../components/Title";
 import ContentContainer from "../components/ContentContainer";
+import Image from "../components/Image";
+import profilePic from "../assets/profile.jpg";
 
 export default function About() {
     return (
@@ -14,6 +16,11 @@ export default function About() {
                     <Title>
                         Hi, I'm Collin
                     </Title>
+                    <Image 
+                        src={profilePic}
+                        alt="Collin Howland"
+                        shape="circle"
+                    />
                     <p>
                         I'm a passionate developer and creative thinker who loves learning and building things that make people smile.
                         If I'm not learning, I'm not happy.
@@ -35,7 +42,7 @@ export default function About() {
             {/* Social Links */}
             <div className="mt-8 flex gap-6 items-center justify-center">
                 <a
-                    href="https://www.linkedin.com/in/your-linkedin/"
+                    href="https://www.linkedin.com/in/collin-howland/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"

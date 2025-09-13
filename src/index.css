@@ -12,8 +12,8 @@
 
   --font-heading: 'Raleway', sans-serif;
   --font-accent: 'Raleway', sans-serif;
-  --font-body: 'Raleway', sans-serif;
-  --font-sans: 'Raleway', sans-serif;
+  --font-body: 'Sono', sans-serif;
+  --font-sans: 'Sono', sans-serif;
   --font-ui: 'Raleway', sans-serif;
 }
 
@@ -22,4 +22,8 @@ body {
   background: var(--color-deep-forest);
   color: var(--color-oatmeal-beige);
   font-family: var(--font-body);
+}
+
+.circle {
+  shape-outside: circle();
 }

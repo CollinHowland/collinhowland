@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import ContentContainer from "../components/ContentContainer";
 import Title from "../components/Title";
 import LinkButton from "../components/LinkButton";

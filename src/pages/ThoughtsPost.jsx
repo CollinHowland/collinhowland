@@ -1,7 +1,6 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import fm from "front-matter";
-import ReactMarkdown from "react-markdown";
 import ContentContainer from "../components/ContentContainer";
 import LinkButton from "../components/LinkButton";
 import { useNavigate } from "react-router-dom";
